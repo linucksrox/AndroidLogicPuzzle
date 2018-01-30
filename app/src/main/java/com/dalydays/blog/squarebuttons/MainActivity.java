@@ -71,40 +71,40 @@ public class MainActivity extends AppCompatActivity {
         e3 = findViewById(R.id.e3);
         e4 = findViewById(R.id.e4);
 
-        // set click listeners on all buttons
+        // set click listeners on all buttons, which also maps their coordinates
         a0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(0, 0);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         a1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(0, 1);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         a2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(0, 2);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         a3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(0, 3);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         a4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(0, 4);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
 
@@ -112,35 +112,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(1, 0);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(1, 1);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(1, 2);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(1, 3);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(1, 4);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
 
@@ -148,35 +148,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(2, 0);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(2, 1);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(2, 2);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(2, 3);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         c4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(2, 4);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
 
@@ -184,35 +184,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(3, 0);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         d1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(3, 1);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         d2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(3, 2);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         d3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(3, 3);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         d4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(3, 4);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
 
@@ -220,35 +220,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(4, 0);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         e1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(4, 1);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         e2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(4, 2);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         e3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(4, 3);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
         e4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAdjacent(4, 4);
-                // checkIfSolved();
+                checkIfSolved();
             }
         });
     }
@@ -441,5 +441,9 @@ public class MainActivity extends AppCompatActivity {
         else {
             button.setBackgroundColor(getResources().getColor(R.color.colorLightOn));
         }
+    }
+
+    private void checkIfSolved() {
+        //
     }
 }
