@@ -1,4 +1,4 @@
-package com.dalydays.blog.logicpuzzle;
+package com.dalydays.blog.squarebuttons;
 
 import org.junit.Test;
 

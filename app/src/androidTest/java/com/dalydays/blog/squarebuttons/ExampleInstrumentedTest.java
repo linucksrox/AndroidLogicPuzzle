@@ -1,4 +1,4 @@
-package com.dalydays.blog.logicpuzzle;
+package com.dalydays.blog.squarebuttons;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.dalydays.blog.logicpuzzle", appContext.getPackageName());
+        assertEquals("com.dalydays.blog.squarebuttons", appContext.getPackageName());
     }
 }
