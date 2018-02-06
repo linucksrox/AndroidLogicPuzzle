@@ -34,6 +34,7 @@ public class PuzzleBoardActivity extends AppCompatActivity {
     private Button e3;
     private Button e4;
     private int numberOfLightsOn = 0;
+    private int numberOfRandomPresses = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -262,18 +263,24 @@ public class PuzzleBoardActivity extends AppCompatActivity {
         int max = 20;
         int range = max - min;
         int numToPress = (int) (Math.random() * range) + min;
-        int randomX;
-        int randomY;
+        numberOfRandomPresses = numToPress;
 
         // randomly press that number of buttons
         min = 0;
         max = 4;
         range = max - min;
+        int randomX;
+        int randomY;
         while (numToPress > 0) {
             randomX = (int) (Math.random() * range) + min;
             randomY = (int) (Math.random() * range) + min;
             toggleAdjacent(randomX, randomY);
             numToPress--;
+        }
+
+        // if no lights are on, we should randomize again
+        if (numberOfLightsOn == 0) {
+            randomizeBoard();
         }
     }
 
