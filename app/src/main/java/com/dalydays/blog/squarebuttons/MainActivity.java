@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button a0;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Button e2;
     private Button e3;
     private Button e4;
+    private int numberOfLightsOn = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -436,13 +438,17 @@ public class MainActivity extends AppCompatActivity {
         ColorDrawable buttonColor = (ColorDrawable) button.getBackground();
         if (buttonColor.getColor() == getResources().getColor(R.color.colorLightOn)) {
             button.setBackgroundColor(getResources().getColor(R.color.colorLightOff));
+            numberOfLightsOn--;
         }
         else {
             button.setBackgroundColor(getResources().getColor(R.color.colorLightOn));
+            numberOfLightsOn++;
         }
     }
 
     private void checkIfSolved() {
-        //
+        if (numberOfLightsOn == 0) {
+            Toast.makeText(this, "You win!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
