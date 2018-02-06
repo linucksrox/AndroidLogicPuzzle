@@ -1,4 +1,4 @@
-package com.dalydays.blog.squarebuttons;
+package com.dalydays.blog.lightsout;
 
 import org.junit.Test;
 

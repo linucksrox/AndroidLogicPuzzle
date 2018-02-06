@@ -1,4 +1,4 @@
-package com.dalydays.blog.squarebuttons;
+package com.dalydays.blog.lightsout;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

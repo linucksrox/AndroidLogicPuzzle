@@ -1,4 +1,4 @@
-package com.dalydays.blog.squarebuttons;
+package com.dalydays.blog.lightsout;
 
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class PuzzleBoardActivity extends AppCompatActivity {
     private Button a0;
     private Button a1;
     private Button a2;
