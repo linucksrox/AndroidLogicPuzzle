@@ -252,6 +252,29 @@ public class PuzzleBoardActivity extends AppCompatActivity {
                 checkIfSolved();
             }
         });
+
+        randomizeBoard();
+    }
+
+    private void randomizeBoard() {
+        // pick a number of buttons to press
+        int min = 5;
+        int max = 20;
+        int range = max - min;
+        int numToPress = (int) (Math.random() * range) + min;
+        int randomX;
+        int randomY;
+
+        // randomly press that number of buttons
+        min = 0;
+        max = 4;
+        range = max - min;
+        while (numToPress > 0) {
+            randomX = (int) (Math.random() * range) + min;
+            randomY = (int) (Math.random() * range) + min;
+            toggleAdjacent(randomX, randomY);
+            numToPress--;
+        }
     }
 
     private void toggleAdjacent(int row, int column) {
