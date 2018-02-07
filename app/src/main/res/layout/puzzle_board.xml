@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_marginTop="@dimen/buttonWidth"
-    android:layout_gravity="center">
+    android:layout_gravity="center_horizontal">
 
     <LinearLayout
+        android:id="@+id/buttonRowA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@id/buttonRowB">
 
         <Button
             android:id="@+id/a0"
@@ -45,9 +46,11 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@id/buttonRowC">
 
         <Button
             android:id="@+id/b0"
@@ -83,9 +86,11 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@+id/buttonRowD">
 
         <Button
             android:id="@+id/c0"
@@ -121,9 +126,11 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@+id/buttonRowE">
 
         <Button
             android:id="@+id/d0"
@@ -159,9 +166,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp">
 
         <Button
             android:id="@+id/e0"
@@ -196,4 +206,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
