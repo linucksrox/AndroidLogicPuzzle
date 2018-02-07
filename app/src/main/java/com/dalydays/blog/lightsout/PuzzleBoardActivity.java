@@ -1,13 +1,13 @@
 package com.dalydays.blog.lightsout;
 
+import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class PuzzleBoardActivity extends AppCompatActivity {
+public class PuzzleBoardActivity extends Activity {
     private Button a0;
     private Button a1;
     private Button a2;
