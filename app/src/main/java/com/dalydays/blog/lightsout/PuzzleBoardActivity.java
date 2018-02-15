@@ -1,13 +1,13 @@
 package com.dalydays.blog.lightsout;
 
+import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class PuzzleBoardActivity extends AppCompatActivity {
+public class PuzzleBoardActivity extends Activity {
     private Button a0;
     private Button a1;
     private Button a2;
@@ -35,6 +35,7 @@ public class PuzzleBoardActivity extends AppCompatActivity {
     private Button e4;
     private int numberOfLightsOn = 0;
     private int numberOfRandomPresses = 0;
+    private int runningNumberOfMoves = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -282,6 +283,9 @@ public class PuzzleBoardActivity extends AppCompatActivity {
         if (numberOfLightsOn == 0) {
             randomizeBoard();
         }
+
+        // reset running number of moves because we should only count moves made by the user
+        runningNumberOfMoves = 0;
     }
 
     private void toggleAdjacent(int row, int column) {
@@ -462,6 +466,9 @@ public class PuzzleBoardActivity extends AppCompatActivity {
                 }
                 break;
         }
+
+        // count one more move
+        runningNumberOfMoves++;
     }
 
     private void toggleButton(Button button) {
@@ -478,7 +485,7 @@ public class PuzzleBoardActivity extends AppCompatActivity {
 
     private void checkIfSolved() {
         if (numberOfLightsOn == 0) {
-            Toast.makeText(this, "You win!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You won after " + runningNumberOfMoves + " moves, and it should have taken no more than " + numberOfRandomPresses + " moves.", Toast.LENGTH_SHORT).show();
         }
     }
 }
