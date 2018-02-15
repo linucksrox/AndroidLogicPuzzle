@@ -14,7 +14,7 @@
         android:layout_marginTop="70dp"
         android:fontFamily="serif"
         android:text="@string/game_title"
-        android:textSize="60dp" />
+        android:textSize="60sp" />
 
     <TextView
         android:id="@+id/gameDescription"
@@ -26,7 +26,7 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="serif"
         android:text="@string/game_description"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/startGameButton"

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="buttonWidth">50dp</dimen>
     <dimen name="buttonSpacing">2dp</dimen>
+    <dimen name="textHeaderFontSize">30sp</dimen>
 </resources>
