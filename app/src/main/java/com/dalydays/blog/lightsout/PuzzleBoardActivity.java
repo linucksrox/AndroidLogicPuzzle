@@ -488,8 +488,12 @@ public class PuzzleBoardActivity extends Activity {
         if (numberOfLightsOn == 0) {
             // Go to winning screen, passing all values to be displayed
             Intent intent = new Intent(PuzzleBoardActivity.this, EndGameActivity.class);
-
-            //Toast.makeText(this, "You won after " + runningNumberOfMoves + " moves, and it should have taken no more than " + numberOfRandomPresses + " moves.", Toast.LENGTH_SHORT).show();
+            Bundle b = new Bundle();
+            b.putInt("numberOfMovesTaken", runningNumberOfMoves);
+            b.putInt("numberToBeat", numberOfRandomPresses);
+            intent.putExtras(b);
+            startActivity(intent);
+            finish();
         }
     }
 }
