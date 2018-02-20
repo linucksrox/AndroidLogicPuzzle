@@ -1,6 +1,7 @@
 package com.dalydays.blog.lightsout;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -485,7 +486,10 @@ public class PuzzleBoardActivity extends Activity {
 
     private void checkIfSolved() {
         if (numberOfLightsOn == 0) {
-            Toast.makeText(this, "You won after " + runningNumberOfMoves + " moves, and it should have taken no more than " + numberOfRandomPresses + " moves.", Toast.LENGTH_SHORT).show();
+            // Go to winning screen, passing all values to be displayed
+            Intent intent = new Intent(PuzzleBoardActivity.this, EndGameActivity.class);
+
+            //Toast.makeText(this, "You won after " + runningNumberOfMoves + " moves, and it should have taken no more than " + numberOfRandomPresses + " moves.", Toast.LENGTH_SHORT).show();
         }
     }
 }

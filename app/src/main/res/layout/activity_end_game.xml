@@ -8,8 +8,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/winning_text_margin_top"
+        android:layout_marginTop="@dimen/title_text_margin_top"
+        android:fontFamily="serif"
         android:text="@string/winning_text"
         android:textSize="@dimen/textHeaderFontSize"/>
+
+    <TextView
+        android:id="@+id/numberOfMovesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/winningText"
+        android:layout_marginLeft="@dimen/stats_margin_left"
+        android:layout_marginTop="@dimen/buttonWidth"
+        android:text="numberOfMovesTextView"/>
+
+    <TextView
+        android:id="@+id/numberToBeatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numberOfMovesTextView"
+        android:layout_marginLeft="@dimen/stats_margin_left"
+        android:layout_marginTop="@dimen/stats_margin_top"
+        android:text="numberToBeatTextView"/>
+
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/start_button_bottom_margin"
+        android:text="@string/start_over_button_text" />
 
 </RelativeLayout>
