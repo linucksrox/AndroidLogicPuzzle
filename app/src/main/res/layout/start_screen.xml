@@ -11,10 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="@dimen/title_text_margin_top"
         android:fontFamily="serif"
         android:text="@string/game_title"
-        android:textSize="60sp" />
+        android:textSize="@dimen/header_font_size" />
 
     <TextView
         android:id="@+id/gameDescription"
@@ -26,7 +26,7 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="serif"
         android:text="@string/game_description"
-        android:textSize="20sp" />
+        android:textSize="@dimen/tagline_font_size" />
 
     <Button
         android:id="@+id/startGameButton"
@@ -35,6 +35,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="@dimen/start_button_bottom_margin"
         android:text="@string/start_game_button_text" />
 </RelativeLayout>
