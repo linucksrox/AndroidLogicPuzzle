@@ -32,7 +32,7 @@
         android:text="numberToBeatTextView"/>
 
     <Button
-        android:id="@+id/startGameButton"
+        android:id="@+id/startOverButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

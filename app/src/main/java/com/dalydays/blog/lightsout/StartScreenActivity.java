@@ -23,7 +23,8 @@ public class StartScreenActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent newPuzzle = new Intent(StartScreenActivity.this, PuzzleBoardActivity.class);
-                StartScreenActivity.this.startActivity(newPuzzle);
+                startActivity(newPuzzle);
+                finish();
             }
         });
     }
