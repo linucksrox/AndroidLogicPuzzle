@@ -33,7 +33,7 @@ class EndGameActivity : Activity() {
         val numberOfMovesTakenTextView = findViewById<TextView>(R.id.numberOfMovesTextView)
         val numberToBeatTextView = findViewById<TextView>(R.id.numberToBeatTextView)
 
-        numberOfMovesTakenTextView.text = "It took you $numberOfMovesTaken moves to win"
-        numberToBeatTextView.text = "The number to beat was " + numberToBeat
+        numberOfMovesTakenTextView.text = getString(R.string.number_of_moves_taken_text, numberOfMovesTaken)
+        numberToBeatTextView.text = getString(R.string.number_to_beat_text, numberToBeat)
     }
 }
