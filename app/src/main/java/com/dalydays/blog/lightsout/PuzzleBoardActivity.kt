@@ -7,11 +7,15 @@ import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.widget.Button
 import kotlinx.android.synthetic.main.puzzle_board.*
+import java.util.*
 
 class PuzzleBoardActivity : Activity() {
     private var numberOfLightsOn = 0
     private var numberOfRandomPresses = 0
     private var runningNumberOfMoves = 0
+
+    fun array2dOfInt(sizeOuter: Int, sizeInner: Int): Array<IntArray>
+            = Array(sizeOuter) { IntArray(sizeInner) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -127,24 +131,15 @@ class PuzzleBoardActivity : Activity() {
     }
 
     private fun randomizeBoard() {
-        // pick a number of buttons to press
-        var min = 5
-        var max = 20
-        var range = max - min
-        var numToPress = (Math.random() * range).toInt() + min
-        numberOfRandomPresses = numToPress
-
-        // randomly press that number of buttons
-        min = 0
-        max = 4
-        range = max - min
-        var randomX: Int
-        var randomY: Int
-        while (numToPress > 0) {
-            randomX = (Math.random() * range).toInt() + min
-            randomY = (Math.random() * range).toInt() + min
-            toggleAdjacent(randomX, randomY)
-            numToPress--
+        // loop through each button, randomly pressing them and keeping track of how many were pressed
+        var shouldPressButton = Random()
+        for (i in 0..4) {
+            for (j in 0..4) {
+                if (shouldPressButton.nextBoolean()) {
+                    toggleAdjacent(i, j)
+                    numberOfRandomPresses++
+                }
+            }
         }
 
         // if no lights are on, we should randomize again
