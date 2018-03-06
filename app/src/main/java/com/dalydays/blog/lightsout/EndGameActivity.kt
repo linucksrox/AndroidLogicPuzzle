@@ -3,7 +3,6 @@ package com.dalydays.blog.lightsout
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_end_game.*
 
 /**
@@ -30,10 +29,7 @@ class EndGameActivity : Activity() {
             numberToBeat = b.getInt("numberToBeat")
         }
 
-        val numberOfMovesTakenTextView = findViewById<TextView>(R.id.numberOfMovesTextView)
-        val numberToBeatTextView = findViewById<TextView>(R.id.numberToBeatTextView)
-
-        numberOfMovesTakenTextView.text = getString(R.string.number_of_moves_taken_text, numberOfMovesTaken)
+        numberOfMovesTextView.text = getString(R.string.number_of_moves_taken_text, numberOfMovesTaken)
         numberToBeatTextView.text = getString(R.string.number_to_beat_text, numberToBeat)
     }
 }
