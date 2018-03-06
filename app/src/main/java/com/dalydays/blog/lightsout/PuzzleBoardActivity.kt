@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.widget.Button
 import kotlinx.android.synthetic.main.puzzle_board.*
 
@@ -330,11 +331,11 @@ class PuzzleBoardActivity : Activity() {
 
     private fun toggleButton(button: Button?) {
         val buttonColor = button!!.background as ColorDrawable
-        if (buttonColor.color == resources.getColor(R.color.colorLightOn)) {
-            button.setBackgroundColor(resources.getColor(R.color.colorLightOff))
+        if (buttonColor.color == ContextCompat.getColor(this, R.color.colorLightOn)) {
+            button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorLightOff))
             numberOfLightsOn--
         } else {
-            button.setBackgroundColor(resources.getColor(R.color.colorLightOn))
+            button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorLightOn))
             numberOfLightsOn++
         }
     }
