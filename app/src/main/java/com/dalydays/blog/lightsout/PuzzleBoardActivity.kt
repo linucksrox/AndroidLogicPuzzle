@@ -14,9 +14,6 @@ class PuzzleBoardActivity : Activity() {
     private var numberOfRandomPresses = 0
     private var runningNumberOfMoves = 0
 
-    fun array2dOfInt(sizeOuter: Int, sizeInner: Int): Array<IntArray>
-            = Array(sizeOuter) { IntArray(sizeInner) }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.puzzle_board)
